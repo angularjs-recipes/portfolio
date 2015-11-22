@@ -9,21 +9,11 @@ module.exports = function(grunt) {
                     keepalive: true
                 }
             }
-        },
-        protractor: {
-            options: {
-                configFile: "test/conf.js",
-                keepAlive: true,
-                noColor: false
-            },
-            all: {},
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks('grunt-protractor-runner');
 
     grunt.registerTask('default', []);
     grunt.registerTask('serve', ['connect:server']);
-    grunt.registerTask('test', ['protractor:all']);
 };
