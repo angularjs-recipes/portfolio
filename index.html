@@ -5,10 +5,32 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/bootswatch/paper/bootstrap.min.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="assets/css/style.css" media="screen" charset="utf-8">
     <title>My Portfolio</title>
 </head>
 
 <body ng-app="portfolioApp" ng-cloak>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/">My Works</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#/about">About</a></li>
+                    <li><a href="#/contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- Route's template start -->
     <ng-view></ng-view>
@@ -18,14 +40,11 @@
     <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
     <script type="text/javascript" src="app/app.module.js"></script>
     <script type="text/javascript" src="app/app.routes.js"></script>
-    <script type="text/javascript" src="app/controllers/home.js"></script>
-    <script type="text/javascript" src="app/controllers/about.js"></script>
-    <script type="text/javascript" src="app/controllers/projects.js"></script>
-    <script type="text/javascript" src="app/controllers/project.js"></script>
-    <script type="text/javascript" src="app/controllers/contact.js"></script>
-    <script type="text/javascript" src="app/controllers/error.js"></script>
-    <script type="text/javascript" src="app/services.js"></script>
-    <script type="text/javascript" src="app/directives.js"></script>
+    <script type="text/javascript" src="app/components/homePage.component.js"></script>
+    <script type="text/javascript" src="app/components/aboutPage.component.js"></script>
+    <script type="text/javascript" src="app/components/projectPage.component.js"></script>
+    <script type="text/javascript" src="app/components/contactPage.component.js"></script>
+    <script type="text/javascript" src="app/components/errorPage.component.js"></script>
 </body>
 
 </html>

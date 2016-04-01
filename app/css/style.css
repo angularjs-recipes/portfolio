@@ -1,0 +1,37 @@
+body {
+    background-color: #3B3B3B;
+    font-size: 14px;
+}
+.navbar {
+    border-radius: 0;
+}
+.navbar-default {
+    background-color: #333;
+}
+.navbar-default .navbar-nav>li>a {
+    text-transform: uppercase;
+    color: #fff;
+}
+.navbar-default .navbar-nav>li.active>a {
+    color: #22EE5B;
+    color: #F0CA54;
+}
+.btn.btn-gold {
+    background-color: #F0CA54;
+}
+.navbar-default .navbar-brand {
+    color: #F0CA54;
+}
+.panel {
+    overflow: visible;
+}
+.panel img {
+    max-width: 100%;
+}
+.panel:hover .panel-image {
+    transform: scale(1.02);
+}
+.panel-image {
+    transition: all .4s ease-in-out;
+    border-radius: 2px 2px 0 0;
+}
