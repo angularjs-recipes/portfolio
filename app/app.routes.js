@@ -9,7 +9,10 @@
     function config($routeProvider) {
         $routeProvider
             .when('/', {
-                template: '<home-page></home-page>'
+                resolve: {
+                    projects: projectsPrepFactory
+                },
+                template: '<home-page projects=$resolve.projects></home-page>'
             })
             .when('/about', {
                 template: '<about-page></about-page>'
@@ -26,5 +29,11 @@
             .otherwise({
                 redirectTo: '/error'
             });
+    }
+
+    projectsPrepFactory.$inject = ['projectsFactory'];
+
+    function projectsPrepFactory(projectsFactory) {
+        return projectsFactory.all();
     }
 })();

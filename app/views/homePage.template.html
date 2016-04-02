@@ -4,45 +4,7 @@
             <h2>Projects</h2>
         </div>
     </div>
-    <!-- <div class="row">
-        <div class="col-xs-12 col-md-4">
-            <div class="panel">
-                <div class="panel-image">
-                    <img src="assets/images/1.png" alt="" />
-                </div>
-                <div class="panel-body">
-                    <h4>Project's Title</h4>
-                </div>
-                <div class="panel-footer">
-                    <button type="button" class="btn btn-block btn-gold">View More</button>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-md-4">
-            <div class="panel">
-                <div class="panel-image">
-                    <img src="assets/images/1.png" alt="" />
-                </div>
-                <div class="panel-body">
-                    <h4>Project's Title</h4>
-                </div>
-                <div class="panel-footer">
-                    <button type="button" class="btn btn-block btn-gold">View More</button>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-md-4">
-            <div class="panel">
-                <div class="panel-image">
-                    <img src="assets/images/1.png" alt="" />
-                </div>
-                <div class="panel-body">
-                    <h4>Project's Title</h4>
-                </div>
-                <div class="panel-footer">
-                    <button type="button" class="btn btn-block btn-gold">View More</button>
-                </div>
-            </div>
-        </div>
-    </div> -->
+    <div class="row">
+        <project-list-item project=project ng-repeat="project in $ctrl.projects"></project-list-item>
+    </div>
 </div>
