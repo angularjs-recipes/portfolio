@@ -18,7 +18,10 @@
                 template: '<about-page></about-page>'
             })
             .when('/projects/:id/:slug', {
-                template: '<project-page></project-page>'
+                resolve: {
+                    project: projectPrepFactory
+                },
+                template: '<project-page project=$resolve.project></project-page>'
             })
             .when('/contact', {
                 template: '<contact-page></contact-page>'
@@ -35,5 +38,11 @@
 
     function projectsPrepFactory(projectsFactory) {
         return projectsFactory.all();
+    }
+
+    projectPrepFactory.$inject = ['projectsFactory', '$route'];
+
+    function projectPrepFactory(projectsFactory, $route) {
+        return projectsFactory.get($route.current.params.id);
     }
 })();
