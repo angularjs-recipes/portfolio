@@ -11,10 +11,10 @@ function projectsFactory($http) {
     };
 
     function all() {
-        return $http.get('/api/projects');
+        return $http.get('http://angularjs-recipes.com/demo/projects');
     }
 
     function get(id) {
-        return $http.get('/api/projects/' + id);
+        return $http.get('http://angularjs-recipes.com/demo/projects/' + id);
     }
 }

@@ -37,12 +37,20 @@
     projectsPrepFactory.$inject = ['projectsFactory'];
 
     function projectsPrepFactory(projectsFactory) {
-        return projectsFactory.all();
+        return projectsFactory
+            .all()
+            .then(function(response) {
+                return response.data;
+            });
     }
 
     projectPrepFactory.$inject = ['projectsFactory', '$route'];
 
     function projectPrepFactory(projectsFactory, $route) {
-        return projectsFactory.get($route.current.params.id);
+        return projectsFactory
+            .get($route.current.params.id)
+            .then(function(response) {
+                return response.data;
+            });
     }
 })();
