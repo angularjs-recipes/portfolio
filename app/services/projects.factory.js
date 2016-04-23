@@ -2,26 +2,19 @@ angular
     .module('portfolioApp')
     .factory('projectsFactory', projectsFactory);
 
-projectsFactory.$inject = [];
+projectsFactory.$inject = ['$http'];
 
-function projectsFactory() {
+function projectsFactory($http) {
     return {
-        all: all
+        all: all,
+        get: get
     };
 
     function all() {
-        return [{
-            id: 1,
-            title: 'a',
-            body: 'a'
-        }, {
-            id: 2,
-            title: 'b',
-            body: 'b'
-        }, {
-            id: 3,
-            title: 'c',
-            body: 'c'
-        }];
+        return $http.get('/api/projects');
+    }
+
+    function get(id) {
+        return $http.get('/api/projects/' + id);
     }
 }
