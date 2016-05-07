@@ -1,4 +1,4 @@
 (function() {
 	'use strict';
-	angular.module('portfolioApp', ['ngRoute']);
+	angular.module('portfolioApp', ['ngRoute', 'ngMessages']);
 })();

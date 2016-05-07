@@ -1,7 +1,63 @@
 <div class="container">
-    <div class="row">
-        <div class="col-xs-12">
-            <h2 class="text-center decorated">Say hello</h2>
-        </div>
-    </div>
+	<div class="row">
+		<div class="col-xs-12">
+			<h2 class="text-center decorated">Say hello</h2>
+		</div>
+	</div>
+
+	<form name="$ctrl.contactForm" ng-submit="$ctrl.submit($ctrl.contactForm.$valid)" ng-if="!$ctrl.isSubmitted" novalidate>
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="name">Name</label>
+					<input type="text" name="name" id="name" ng-model="$ctrl.user.name" class="form-control"
+						   required>
+
+					<div ng-messages="$ctrl.contactForm.name.$error"
+						 ng-show="$ctrl.contactForm.$submitted || $ctrl.contactForm.name.$dirty">
+						<p ng-message="required" class="error-text">Please enter your name</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input type="email" name="email" id="email" ng-model="$ctrl.user.email" class="form-control"
+						   required>
+
+					<div ng-messages="$ctrl.contactForm.email.$error"
+						 ng-show="$ctrl.contactForm.$submitted || $ctrl.contactForm.email.$dirty">
+						<p ng-message="required" class="error-text">Please enter your email</p>
+
+						<p ng-message="email" class="error-text">Please enter a valid email address</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label for="message">Message</label>
+					<textarea name="message" id="message" ng-model="$ctrl.user.message" rows="10" class="form-control"
+							  required></textarea>
+
+					<div ng-messages="$ctrl.contactForm.message.$error"
+						 ng-show="$ctrl.contactForm.$submitted || $ctrl.contactForm.message.$dirty">
+						<p ng-message="required" class="error-text">Please enter your message</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<button type="submit" class="btn btn-lg btn-gold">Send</button>
+			</div>
+		</div>
+	</form>
+
+	<div class="row" ng-if="$ctrl.isSubmitted">
+		<div class="col-xs-12">
+			<h3 class="text-center">Thanks for sending this {{ $ctrl.user.name }}!</h3>
+		</div>
+	</div>
 </div>
