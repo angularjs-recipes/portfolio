@@ -19,6 +19,7 @@
     "angular-route": "^1.5.5",
     "angular": "^1.5.5",
     "bootswatch": "^3.3.6",
-    "angular-messages": "^1.5.5"
+    "angular-messages": "^1.5.5",
+    "font-awesome": "^4.6.2"
   }
 }

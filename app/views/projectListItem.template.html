@@ -1,13 +1,17 @@
 <div class="col-xs-12 col-md-4">
-    <div class="panel">
-        <div class="panel-image">
-            <img ng-src="{{$ctrl.project.img}}" alt="{{$ctrl.project.title}}" />
-        </div>
-        <div class="panel-body">
-            <h4>{{$ctrl.project.title}}</h4>
-        </div>
-        <div class="panel-footer">
-            <a ng-href="#/projects/{{$ctrl.project.id}}/{{$ctrl.project.slug}}" class="btn btn-block btn-gold">View More</a>
-        </div>
-    </div>
+	<div class="panel">
+		<div class="panel-image">
+			<img ng-src="{{$ctrl.project.img}}" alt="{{$ctrl.project.title}}"/>
+		</div>
+		<div class="panel-body">
+			<h4><a ng-href="#/projects/{{$ctrl.project.id}}/{{$ctrl.project.slug}}">{{$ctrl.project.title}}</a></h4>
+		</div>
+		<div class="panel-footer">
+			<div class="text-center">
+				<a ng-href="{{ $ctrl.shareLink('facebook') }}" class="social-link"><i class="fa fa-facebook"></i></a>
+				<a ng-href="{{ $ctrl.shareLink('twitter') }}" class="social-link"><i class="fa fa-twitter"></i></a>
+				<a ng-href="{{ $ctrl.shareLink('linkedin') }}" class="social-link"><i class="fa fa-linkedin"></i></a>
+			</div>
+		</div>
+	</div>
 </div>

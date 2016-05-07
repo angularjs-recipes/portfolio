@@ -2,6 +2,13 @@ body {
     background-color: #3B3B3B;
     font-size: 14px;
 }
+a {
+	color: #3b3b3b;
+}
+a:hover {
+	color: #F0CA54;
+	text-decoration: none;
+}
 .navbar {
     border-radius: 0;
     background-color: #333;
@@ -60,6 +67,14 @@ h3 {
 .panel-bg-image {
     height: 300px;
     background-size: cover;
+}
+.social-link {
+	display: inline-block;
+	width: 30%;
+	color: #3b3b3b;
+}
+.social-link:hover {
+	color: #F0CA54;
 }
 textarea,
 textarea.form-control,
