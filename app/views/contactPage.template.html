@@ -14,7 +14,7 @@
 						   required>
 
 					<div ng-messages="$ctrl.contactForm.name.$error"
-						 ng-show="$ctrl.contactForm.$submitted || $ctrl.contactForm.name.$dirty">
+						 ng-if="$ctrl.contactForm.$submitted || $ctrl.contactForm.name.$dirty">
 						<p ng-message="required" class="error-text">Please enter your name</p>
 					</div>
 				</div>
@@ -26,7 +26,7 @@
 						   required>
 
 					<div ng-messages="$ctrl.contactForm.email.$error"
-						 ng-show="$ctrl.contactForm.$submitted || $ctrl.contactForm.email.$dirty">
+						 ng-if="$ctrl.contactForm.$submitted || $ctrl.contactForm.email.$dirty">
 						<p ng-message="required" class="error-text">Please enter your email</p>
 
 						<p ng-message="email" class="error-text">Please enter a valid email address</p>
@@ -42,7 +42,7 @@
 							  required></textarea>
 
 					<div ng-messages="$ctrl.contactForm.message.$error"
-						 ng-show="$ctrl.contactForm.$submitted || $ctrl.contactForm.message.$dirty">
+						 ng-if="$ctrl.contactForm.$submitted || $ctrl.contactForm.message.$dirty">
 						<p ng-message="required" class="error-text">Please enter your message</p>
 					</div>
 				</div>
