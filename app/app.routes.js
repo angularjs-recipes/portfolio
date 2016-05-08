@@ -4,9 +4,11 @@
         .module('portfolioApp')
         .config(config);
 
-    config.$inject = ['$routeProvider'];
+    config.$inject = ['$compileProvider', '$routeProvider'];
 
-    function config($routeProvider) {
+    function config($compileProvider, $routeProvider) {
+        $compileProvider.debugInfoEnabled(false);
+
         $routeProvider
             .when('/', {
                 resolve: {
