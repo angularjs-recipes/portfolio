@@ -2,7 +2,7 @@
 
 We are here to create a modern Portfolio SPA with AngularJS 1.5.x. Throughout our project we are going to use recently introduced components directives. Let's have a quick look first:
 
-![Portfolio SPA](https://angularjs-recipes.com/img/series/sd54ft.png)
+![Portfolio SPA](http://angularjs-recipes.com/img/series/sd54ft.png)
 
 Follow steps below to bootstrap the application:
 
