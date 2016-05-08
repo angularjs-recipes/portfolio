@@ -10,7 +10,7 @@ Follow steps below to bootstrap the application:
 git clone git@github.com:angularjs-recipes/portfolio.git
 cd portfolio
 npm install -g bower grunt-cli live-server
-npm install grunt --save-dev
+npm install grunt grunt-contrib-concat grunt-contrib-uglify --save-dev
 bower install && grunt install
 live-server
 ```
